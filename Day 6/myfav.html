@@ -1,0 +1,228 @@
+x!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Array Practice</title>
+
+<style>
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    margin:0;
+}
+
+.container{
+    width:80%;
+    margin:20px auto;
+}
+
+h1{
+    text-align:center;
+    color:#003366;
+}
+
+p{
+    text-align:center;
+}
+
+.task{
+    background:white;
+    border:1px solid #ccc;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:5px;
+}
+
+.task h3{
+    color:#003366;
+}
+
+button{
+    padding:8px 15px;
+    background:#003366;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0055aa;
+}
+
+#output{
+    margin-top:20px;
+    background:white;
+    border:2px solid #003366;
+    padding:15px;
+    min-height:150px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Array Practice Program</h1>
+
+<p>Click any button to run the JavaScript program.</p>
+
+<div class="task">
+<h3>1. Favourite Movies</h3>
+<p>Display the first and last movie.</p>
+<button onclick="moviesTask()">Run Program</button>
+</div>
+
+<div class="task">
+<h3>2. Favourite Games</h3>
+<p>Display the total number of games.</p>
+<button onclick="gamesTask()">Run Program</button>
+</div>
+
+<div class="task">
+<h3>3. Favourite Foods</h3>
+<p>Display the middle food item.</p>
+<button onclick="foodsTask()">Run Program</button>
+</div>
+
+<div class="task">
+<h3>4. Middle Number</h3>
+<p>Find the middle element using Math.floor().</p>
+<button onclick="middleTask()">Run Program</button>
+</div>
+
+<div class="task">
+<h3>5. Last Fruit</h3>
+<p>Display the last fruit using length - 1.</p>
+<button onclick="lastTask()">Run Program</button>
+</div>
+
+<div class="task">
+<h3>6. Favourite Movie</h3>
+<p>Take input from the user.</p>
+<button onclick="bonusTask()">Run Program</button>
+</div>
+
+<div id="output">
+Output will appear here...
+</div>
+
+</div>
+
+<script>
+
+function print(msg){
+document.getElementById("output").innerHTML += msg + "<br>";
+}
+
+function clearOutput(){
+document.getElementById("output").innerHTML="";
+}
+
+function moviesTask(){
+
+clearOutput();
+
+let movies=[
+"Avengers",
+"Interstellar",
+“DC”,
+"Titanic",
+“Hera Pheri”
+];
+
+print("Movies : " + movies.join(", "));
+print("First Movie : " + movies[0]);
+print("Last Movie : " + movies[movies.length-1]);
+
+}
+
+function gamesTask(){
+
+clearOutput();
+
+let games=[
+“Gym”,
+"Cricket",
+"Basketball",
+"Volleyball",
+“Badminton”
+];
+
+print("Games : " + games.join(", "));
+print("Total Games : " + games.length);
+
+}
+
+function foodsTask(){
+
+clearOutput();
+
+let foods=[
+"Pizza",
+"Burger",
+"Pasta",
+"Sandwich",
+"Momos"
+];
+
+let middle=Math.floor(foods.length/2);
+
+print("Foods : " + foods.join(", "));
+print("Middle Food : " + foods[middle]);
+
+}
+
+function middleTask(){
+
+clearOutput();
+
+let arr=[10,20,30,40,50];
+
+let middle=Math.floor(arr.length/2);
+
+print("Array : " + arr);
+print("Middle Item : " + arr[middle]);
+
+}
+
+function lastTask(){
+
+clearOutput();
+
+let fruits=[
+"Apple",
+"Mango",
+"Banana",
+"Orange",
+"Grapes"
+];
+
+print("Fruits : " + fruits.join(", "));
+print("Last Fruit : " + fruits[fruits.length-1]);
+
+}
+
+function bonusTask(){
+
+clearOutput();
+
+let movie=prompt("Enter your favourite movie");
+
+if(movie==""){
+print("No movie entered.");
+}
+else{
+print("Your favourite movie is : " + movie);
+}
+
+}
+
+</script>
+
+</body>
+</html>
